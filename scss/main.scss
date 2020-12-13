@@ -1,0 +1,138 @@
+// IMPORTS
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap");
+
+// FONTS
+$font-body: "Open Sans", sans-serif;
+// headings, call-to-actions, header-nav
+$font-special: "Raleway", sans-serif;
+// COLORS
+//  (intro and email sign up background)
+$intro-dark-blue: hsl(217, 28%, 15%);
+//  (main background)
+$main-dark-blue: hsl(218, 28%, 13%);
+// (footer background)
+$footer-dark-blue: hsl(216, 53%, 9%);
+//  (testimonials background)
+$review-dark-blue: hsl(219, 30%, 18%);
+//  (inside call-to-action gradient)
+$cyan: hsl(176, 68%, 64%);
+//  (inside call-to-action gradient)
+$blue: hsl(198, 60%, 50%);
+//  (error)
+$light-red: hsl(0, 100%, 63%);
+$white: hsl(0, 0%, 100%);
+
+//
+// GLOBAL STYLES
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  color: $white;
+  font-family: $font-body;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-special;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+// HEADER
+
+.wrap-header {
+  background-color: $intro-dark-blue;
+
+  .header {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7rem;
+
+    &-navbar {
+      display: flex;
+      gap: 4.2rem;
+
+      &-link {
+        font-family: $font-special;
+      }
+    }
+  }
+}
+
+// MAIN
+
+.wrap-hero {
+  background-color: $intro-dark-blue;
+  background-image: url(/images/bg-curvy-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  .hero {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+
+    &-image {
+      margin-bottom: 4.2rem;
+    }
+
+    h1 {
+      margin-bottom: 3rem;
+      font-size: 3.8rem;
+      line-height: 1.4;
+    }
+
+    p {
+      width: 80%;
+      margin: 0 auto 2.4rem auto;
+      font-size: 1.8rem;
+    }
+
+    .btn {
+      margin-bottom: 21rem;
+      display: inline-block;
+      border-radius: 2.8rem;
+      background-color: $cyan;
+      padding: 1.4rem 8.4rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
